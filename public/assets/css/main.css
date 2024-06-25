@@ -465,13 +465,14 @@ section,
 }
 
 .hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  /* position: absolute; */
+  /* inset: 0; */
+  /* display: block; */
+  width: 50%;
+  height: 50%;
+  /* object-fit: cover; */
+  z-index: 2;
+  padding: 10px 20px 30px 60px;
 }
 
 .hero:before {
@@ -479,7 +480,7 @@ section,
   background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero .container {
