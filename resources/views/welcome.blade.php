@@ -35,15 +35,9 @@
   ======================================================== -->
 </head>
 <body>
-    <header>
-        <!-- @include('partials.header'); -->
-    </header>
-    <main class = 'main'>
-@yield('content');
-    </main>
-    <footer>
-        <!-- @include('partials.footer'); -->
-    </footer>
+    
+    
+    @yield('content');
     <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

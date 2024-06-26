@@ -16,7 +16,7 @@
 <!-- Section Title -->
 <div class="container section-title" data-aos="fade-up">
   <h2>Contact</h2>
-  <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  <p>Feel free to contact me for any CS and Robotics related issues or ideas</p>
 </div><!-- End Section Title -->
 
 <div class="container" data-aos="fade" data-aos-delay="100">
@@ -28,23 +28,24 @@
         <i class="bi bi-geo-alt flex-shrink-0"></i>
         <div>
           <h3>Address</h3>
-          <p>A108 Adam Street, New York, NY 535022</p>
+          <p>Noya bazar, Saidpur, Nilphamari</p>
         </div>
       </div><!-- End Info Item -->
 
       <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
         <i class="bi bi-telephone flex-shrink-0"></i>
         <div>
-          <h3>Call Us</h3>
-          <p>+1 5589 55488 55</p>
+          <h3>Call Me</h3>
+          <p>01740199745</p>
+          <P>01821022040</P>
         </div>
       </div><!-- End Info Item -->
 
       <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
         <i class="bi bi-envelope flex-shrink-0"></i>
         <div>
-          <h3>Email Us</h3>
-          <p>info@example.com</p>
+          <h3>Email Me</h3>
+          <p>ahmedrezashams4@gmail.com</p>
         </div>
       </div><!-- End Info Item -->
 
