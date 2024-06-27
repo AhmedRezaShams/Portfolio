@@ -11,7 +11,7 @@
 
   <div class="row gy-4">
 
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+    <div onclick= "window.location='{{Route('service1')}}'" class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
       <div class="service-item item-cyan position-relative">
         <div class="icon">
           <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -19,9 +19,10 @@
           </svg>
           <i class="bi bi-activity"></i>
         </div>
-        <a href="service-details.html" class="stretched-link">
-          <h3>Nesciunt Mete</h3>
-        </a>
+        <!-- <a href="service-details.html" class="stretched-link">
+          
+        </a> -->
+        <h3>Nesciunt Mete</h3>
         <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
       </div>
     </div><!-- End Service Item -->

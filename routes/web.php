@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Service1Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/',[HomeController::class, 'home'])->name('home');
+Route::get('service1',[Service1Controller::class,'service1'])->name('service1');

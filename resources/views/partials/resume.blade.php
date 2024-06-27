@@ -30,6 +30,18 @@
         <h5>2019 - 2023</h5>
         <p><em>Bangladesh Army University of Science and Technology, Saidpur.</em></p>
         <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+      </div>
+      <div class="resume-item">
+        <h4>HSC  </h4>
+        <h5>2019</h5>
+        <p><em>Lions School and College, Saidpur</em></p>
+        <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+      </div>
+      <div class="resume-item">
+        <h4>SSC  </h4>
+        <h5>2017</h5>
+        <p><em>Lions School and College, Saidpur</em></p>
+        <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
       </div><!-- Edn Resume Item -->
 
       <!-- <div class="resume-item">
@@ -68,8 +80,64 @@
         </ul>
       </div> -->
       <!-- Edn Resume Item -->
+      <h3 class="resume-title">Achievements</h3>
+      <div class="resume-item">
+        <h4>
+	 ROBAUST </h4>
+        <h5>IntraUniversity Robotics Contest 2023 </h5>
+        <p><em>Project Showcase: Champion Team (Fire Fighter
+Drone).</em></p>
+        <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+      </div>
+      <div class="resume-item">
+        <h4>
+	 Idea Innovation Contest </h4>
+        <h5>2023 </h5>
+        <p><em>(3rd).</em></p>
+        <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+      </div>
+      <div class="resume-item">
+        <h4>MECHA Fest </h4>
+        <h5> 2022</h5>
+        <p><em> Champion Team</em></p>
+        <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+      </div>
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="resume-title">Leadership / Extracurricular</h3>
+      <div class="resume-item">
+      
+        <ul>
+        <li>Project Team Leader of All Projects.
+	 </li>
+          <li>Founder ofMakers Asylum BD (2019).
+	 </li>
+          <li>Robotics Head of BAUST CSE Society and Robotics Club.
+	 </li>
+   <li>Executive member of BAUST Programming Club.
+	 </li>
+   <li>Senior ExecutiveMember of BAUST Blood Donation Community.
+	</li>
+  <li> Senior ExecutiveMember of BAUSTMechatronics and Robotics Club.</li>
+        
+        </ul>
+      </div><!-- Edn Resume Item -->
+
+      <!-- <div class="resume-item">
+        <h4>Graphic design specialist</h4>
+        <h5>2017 - 2018</h5>
+        <p><em>Stepping Stone Advertising, New York, NY</em></p>
+        <ul>
+          <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+          <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+          <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+          <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+        </ul>
+      </div> -->
+      <!-- Edn Resume Item -->
 
     </div>
+    
 
   </div>
 
