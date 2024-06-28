@@ -13,6 +13,10 @@ class AuthController extends Controller
         return view('initialpage');
         
     }
+    public function login_success() {
+    return view('home.index');
+    }
+
     public function login() {
         return view('auth.login');
     }
@@ -32,7 +36,7 @@ class AuthController extends Controller
             'password'=> hash::make($request->password)
         ]);
         if (\Auth::attempt($request->only('email','password'))) {
-            return redirect('home.index');
+            return redirect('dashboard');
             # code...
         }
         return redirect('register')->withError('error');
