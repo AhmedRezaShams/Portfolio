@@ -1,7 +1,5 @@
 
-@if (Route::has('logout'))
-          <a href="{{ route('logout') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Logout</a>
-        @endif
+
 <!-- About Section -->
 <section id="about" class="about section">
 
