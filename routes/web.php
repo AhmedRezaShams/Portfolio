@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Service1Controller;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\CrudController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +33,8 @@ Route::group(["middleware"=>"guest"], function ()
     
     Route::post('/login_success',[HomeController::class,'home'])->name('login_success');
 });
+Route::get('/crud',[CrudController::class, 'crud']);
+// Route::get('/read dat',[CrudController::class,'read']);
 
 
 //Route::get('/logindone',[AuthController::class,'']);
