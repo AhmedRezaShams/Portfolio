@@ -15,22 +15,25 @@ class CrudController extends Controller
        // return view("crudworks.crud");
     }
     public function insert(Request $request)  {
+// dd($request->all());
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'address' => 'required|string|max:255',
-            'phone' => 'required|string|max:255',
+            'name' => 'required',
+            'email' => 'required|email',
+            'address' => 'required',
+            'phone' => 'required',
         ]);
+        dd( $validatedData);
         $data = new Information();
-        $data->Name = $validatedData['name'];
-        $data->Email = $validatedData['email'];
-        $data->Address = $validatedData['name'];
-        $data->Phone = $validatedData['email'];
+        $data->Name = $request['name'];
+        $data->Email = $request['email'];
+        $data->Address = $request['address'];
+        $data->Phone = $request['phone'];
         $data->save();
-        dd($data);
+        
+        
 
 
-       // return redirect('/crud')->with('success', 'Data inserted successfully!');
+       return redirect('/crud')->with('success', 'Data inserted successfully!');
     }
     // public function read(Request $request){
     //     $readOperation = Information::all();

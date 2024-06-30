@@ -173,6 +173,23 @@ $(document).ready(function(){
 	</div>        
 </div>
 <!-- Edit Modal HTML -->
+
+@if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
 <div id="addEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -193,7 +210,7 @@ $(document).ready(function(){
 					</div>
 					<div class="form-group">
 						<label>Address</label>
-						<textarea class="form-control" id="address" name="adress" required></textarea>
+						<textarea class="form-control" id="address" name="address" ></textarea>
 					</div>
 					<div class="form-group">
 						<label>Phone</label>
