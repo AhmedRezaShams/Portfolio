@@ -71,6 +71,9 @@ $(document).ready(function(){
 					</tr>
 				</thead>
 				<tbody>
+					@foreach ($tableitem as $item )
+					
+					
 					<tr>
 						<td>
 							<span class="custom-checkbox">
@@ -78,16 +81,17 @@ $(document).ready(function(){
 								<label for="checkbox1"></label>
 							</span>
 						</td>
-						<td>{{$tableitem->name}}</td>
-						<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a3e2225272b39222b382e330a272b232664292527">[email&#160;protected]</a></td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
-						<td>(171) 555-2222</td>
+						<td>{{$item->Name}}</td>
+						<td>{{$item->Email}}</td>
+						<td>{{$item->Address}}</td>
+						<td>{{$item->Phone}}</td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
-					<tr>
+					@endforeach
+					<!-- <tr>
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox2" name="options[]" value="1">
@@ -150,7 +154,7 @@ $(document).ready(function(){
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
-					</tr> 
+					</tr>  -->
 				</tbody>
 			</table>
 			<div class="clearfix">
@@ -172,7 +176,8 @@ $(document).ready(function(){
 <div id="addEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form>
+			<form action="{{route('insert')}}" method="POST">
+				@csrf
 				<div class="modal-header">						
 					<h4 class="modal-title">Add Employee</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -180,19 +185,19 @@ $(document).ready(function(){
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" class="form-control" required>
+						<input type="text" class="form-control" id="name" name="name" required>
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="email" class="form-control" required>
+						<input type="email" class="form-control" id="email" name ="email" required>
 					</div>
 					<div class="form-group">
 						<label>Address</label>
-						<textarea class="form-control" required></textarea>
+						<textarea class="form-control" id="address" name="adress" required></textarea>
 					</div>
 					<div class="form-group">
 						<label>Phone</label>
-						<input type="text" class="form-control" required>
+						<input type="text" class="form-control" id="phone" name="phone" required>
 					</div>					
 				</div>
 				<div class="modal-footer">

@@ -34,6 +34,7 @@ Route::group(["middleware"=>"guest"], function ()
     Route::post('/login_success',[HomeController::class,'home'])->name('login_success');
 });
 Route::get('/crud',[CrudController::class, 'crud']);
+Route::post('/insert',[CrudController::class,'insert'])->name('insert');
 // Route::get('/read dat',[CrudController::class,'read']);
 
 
