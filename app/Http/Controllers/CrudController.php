@@ -10,7 +10,13 @@ class CrudController extends Controller
     public function crud(Request $request){
         
         $tableitem = Information::all();
+       
+       
+        //$data = Information::findOrFail();
+
         return view('crudworks.crud', compact('tableitem'));
+        // Pass the data to the view
+       
 
        // return view("crudworks.crud");
     }
@@ -22,7 +28,7 @@ class CrudController extends Controller
             'address' => 'required',
             'phone' => 'required',
         ]);
-        dd( $validatedData);
+       // dd( $validatedData);
         $data = new Information();
         $data->Name = $request['name'];
         $data->Email = $request['email'];
@@ -35,7 +41,29 @@ class CrudController extends Controller
 
        return redirect('/crud')->with('success', 'Data inserted successfully!');
     }
-    // public function read(Request $request){
+    
+
+    public function update(Request $request,$id){
+       //dd($id);
+        $validatedData = $request->validate([
+            'name'=> 'required',
+            'email'=> 'required|email',
+            'address'=> 'required',
+            'phone'=> 'required'
+        ]);
+        //dd($validatedData);
+        $data = Information::findOrFail($id);
+        $data->Name = $validatedData['name'];
+        $data->Email = $validatedData['email'];
+        $data->Address = $validatedData['address'];
+        $data->Phone = $validatedData['phone'];
+        $data->save();
+
+        //Redirect with success message
+       return redirect()->route('crud', $id)->with('success', 'Data updated successfully!');
+        
+   
+            }        // public function read(Request $request){
     //     $readOperation = Information::all();
     //     dd($readOperation);
 }

@@ -86,7 +86,7 @@ $(document).ready(function(){
 						<td>{{$item->Address}}</td>
 						<td>{{$item->Phone}}</td>
 						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+							<a href="#editEmployeeModal"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
@@ -229,7 +229,9 @@ $(document).ready(function(){
 <div id="editEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form>
+			<form action="{{route('crud.update', $item->id)}}" method="POST">
+				@csrf
+				@method('PUT')
 				<div class="modal-header">						
 					<h4 class="modal-title">Edit Employee</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -237,19 +239,19 @@ $(document).ready(function(){
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" class="form-control" required>
+						<input type="text" class="form-control" id="name" name="name" value="{{ old('name', $item->Name) }}" required>
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="email" class="form-control" required>
-					</div>
+						<input type="email" class="form-control" id="email" name="email" value="{{ old('name', $item->Email) }}" required>
+					</div> 
 					<div class="form-group">
 						<label>Address</label>
-						<textarea class="form-control" required></textarea>
+						<textarea class="form-control" id="address" name="address" value="{{ old('name', $item->Address) }}" required></textarea>
 					</div>
 					<div class="form-group">
 						<label>Phone</label>
-						<input type="text" class="form-control" required>
+						<input type="text" class="form-control" name="phone" name="phone" value="{{ old('name', $item->Phone) }}" required>
 					</div>					
 				</div>
 				<div class="modal-footer">
