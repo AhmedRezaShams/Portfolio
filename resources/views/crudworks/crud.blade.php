@@ -15,6 +15,10 @@
 
 <script>
 $(document).ready(function(){
+	$('.edit').click(function() {
+    var employeeId = $(this).data('id');
+    // Use employeeId for pre-populating edit form or other actions
+  });
 	// Activate tooltip
 	$('[data-toggle="tooltip"]').tooltip();
 	
@@ -63,6 +67,7 @@ $(document).ready(function(){
 								<label for="selectAll"></label>
 							</span>
 						</th>
+						<td>Id</td>
 						<th>Name</th>
 						<th>Email</th>
 						<th>Address</th>
@@ -81,14 +86,15 @@ $(document).ready(function(){
 								<label for="checkbox1"></label>
 							</span>
 						</td>
+						<td>{{$item->id}}</td>
 						<td>{{$item->Name}}</td>
 						<td>{{$item->Email}}</td>
 						<td>{{$item->Address}}</td>
 						<td>{{$item->Phone}}</td>
-						<td>{{$item->id}}</td>
+						<!-- <td>{{$item->id}}</td> -->
 						<td>
-							<a href="#editEmployeeModal"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+							<a href="#editEmployeeModal"  class="edit" data-toggle="modal"  data-id="{{ $item->id }}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"  data-id="{{ $item->id }}"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
 					@endforeach
