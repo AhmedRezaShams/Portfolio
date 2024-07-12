@@ -35,7 +35,7 @@ Route::group(["middleware"=>"guest"], function ()
 });
 Route::get('/crud',[CrudController::class, 'crud'])->name('crud');
 Route::post('/insert',[CrudController::class,'insert'])->name('insert');
-Route::get('/crud/{id}/edit', [CrudController::class, 'edit'])->name('data.edit');
+Route::get('/crud/edit/{id}', [CrudController::class, 'edit'])->name('data.edit');
 Route::put('/update/{id}',[CrudController::class,'update'])->name('crud.update');
 
 // Route::get('/read dat',[CrudController::class,'read']);

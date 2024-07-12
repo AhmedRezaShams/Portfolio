@@ -93,8 +93,8 @@ $(document).ready(function(){
 						<td>{{$item->Phone}}</td>
 						<!-- <td>{{$item->id}}</td> -->
 						<td>
-							<a href="#editEmployeeModal"  class="edit" data-toggle="modal"  data-id="{{ $item->id }}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"  data-id="{{ $item->id }}"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+							<a href="#"  class="edit" data-toggle="tooltip" data-url="{{route('data.edit', $item->id)}}"  ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"  ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
 					@endforeach
@@ -232,13 +232,15 @@ $(document).ready(function(){
 		</div>
 	</div>
 </div>
+
 <!-- Edit Modal HTML -->
+
 <div id="editEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form action="{{route('crud.update', $item->id)}}" method="POST">
 				@csrf
-				@method('PUT')
+		
 				<div class="modal-header">						
 					<h4 class="modal-title">Edit Employee</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -269,6 +271,7 @@ $(document).ready(function(){
 		</div>
 	</div>
 </div>
+
 <!-- Delete Modal HTML -->
 <div id="deleteEmployeeModal" class="modal fade">
 	<div class="modal-dialog">

@@ -41,6 +41,11 @@ class CrudController extends Controller
 
        return redirect('/crud')->with('success', 'Data inserted successfully!');
     }
+    public function edit($id) {
+        $item = Information::find($id);
+        return view('crudworks.crud', compact('item'));
+    }
+
     
 
     public function update(Request $request,$id){
