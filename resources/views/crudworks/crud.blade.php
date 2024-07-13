@@ -76,7 +76,8 @@ $(document).ready(function(){
 					</tr>
 				</thead>
 				<tbody>
-					@foreach ($tableitem as $item )
+				
+					@foreach ($tableitem as $item)
 					
 					
 					<tr>
@@ -93,11 +94,19 @@ $(document).ready(function(){
 						<td>{{$item->Phone}}</td>
 						<!-- <td>{{$item->id}}</td> -->
 						<td>
-							<a href="#"  class="edit" data-toggle="tooltip" data-url="{{route('data.edit', $item->id)}}"  ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+						<form action="{{ route('data.edit', $item->id) }}" method="GET">
+    @csrf
+    <a href="#" onclick="this.closest('form').submit(); return false;" data-toggle="tooltip" title="Edit">
+        <i class="material-icons">&#xE254;</i>
+    </a>
+</form>
+
+							<!-- <a href="{{route('data.edit', $item->id)}}"  id="editEmployeeModal"  data-toggle="tooltip" data-url=""  ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> -->
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"  ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
-					@endforeach
+					<!-- Edit Modal HTML -->
+			@endforeach
 					<!-- <tr>
 						<td>
 							<span class="custom-checkbox">
@@ -233,44 +242,7 @@ $(document).ready(function(){
 	</div>
 </div>
 
-<!-- Edit Modal HTML -->
-
-<div id="editEmployeeModal" class="modal fade">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<form action="{{route('crud.update', $item->id)}}" method="POST">
-				@csrf
-		
-				<div class="modal-header">						
-					<h4 class="modal-title">Edit Employee</h4>
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				</div>
-				<div class="modal-body">					
-					<div class="form-group">
-						<label>Name</label>
-						<input type="text" class="form-control" id="name" name="name" value="{{ old('name', $item->Name) }}" required>
-					</div>
-					<div class="form-group">
-						<label>Email</label>
-						<input type="email" class="form-control" id="email" name="email" value="{{ old('name', $item->Email) }}" required>
-					</div> 
-					<div class="form-group">
-						<label>Address</label>
-						<textarea class="form-control" id="address" name="address" value="{{ old('name', $item->Address) }}" required></textarea>
-					</div>
-					<div class="form-group">
-						<label>Phone</label>
-						<input type="text" class="form-control" name="phone" name="phone" value="{{ old('name', $item->Phone) }}" required>
-					</div>					
-				</div>
-				<div class="modal-footer">
-					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-					<input type="submit" class="btn btn-info" value="Save">
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
+@yield('editModal')
 
 <!-- Delete Modal HTML -->
 <div id="deleteEmployeeModal" class="modal fade">
